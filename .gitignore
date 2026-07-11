@@ -1,0 +1,8 @@
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
+bundle/site-bundle.css
+bundle/site-bundle.js
