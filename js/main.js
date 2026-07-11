@@ -30,9 +30,9 @@
 
     $WIN.on("load", function () {
       // will first fade out the loading animation
-      $("#loader").fadeOut("slow", function () {
-        // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(300).fadeOut("slow");
+      $("#loader").fadeOut(150, function () {
+        // Hide the preloader quickly once required assets are ready.
+        $("#preloader").fadeOut(250);
       });
 
       // for hero content animations
@@ -58,9 +58,9 @@
       arrows: false,
       dots: false,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       fade: true,
-      speed: 3000,
+      speed: 1200,
     });
   };
 
