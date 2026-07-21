@@ -1,6 +1,11 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
     <head>
+        <!-- BEGIN BEYOND LEISURE EARLY LOADER STATE -->
+        <script>
+            document.documentElement.classList.add("beyond-page-loading");
+        </script>
+        <!-- END BEYOND LEISURE EARLY LOADER STATE -->
         <title>Beyond Leisure Tours - The Multipurpose HTML5 Template</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,7 +56,7 @@
         <link rel="stylesheet" href="css/icon.min.css"/>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/architecture/architecture.css?v=20260721-2" />
+        <link rel="stylesheet" href="demos/architecture/architecture.css?v=20260721-mobile-3" />
             <!-- BEGIN BEYOND LEISURE STRUCTURED DATA -->
         <script type="application/ld+json">
         {
@@ -725,7 +730,7 @@
                                                  data-marginleft="[0, 0, 0, 0]"
                                                  data-responsive_offset="off"
                                                  data-responsive="on"
-                                                 >Monzo office</div>
+                                                 >Private Winelands</div>
                                             <!-- end large text layer -->
                                             <!-- start button layer -->
                                             <a class="tp-caption text-uppercase text-white btn border-0 btn-switch-text left-icon d-table d-lg-inline-block" 
@@ -876,7 +881,7 @@
                         <div class="separator-line-1px bg-charcoal-grey w-100 mb-25px d-none d-lg-block"></div>
                         <div class="feature-box feature-box-left-icon last-paragraph-no-margin"> 
                             <div class="feature-box-content">
-                                <span class="text-medium-gray fs-18 lh-30 w-80 sm-w-90 d-block"><span class="text-white fw-600">350+</span> very satisfied clients around the worldwide.</span>
+                                <span class="text-medium-gray fs-18 lh-30 w-80 sm-w-90 d-block"><span class="text-white fw-600">Personal</span> service designed around every journey.</span>
                             </div>
                             <div class="feature-box-icon me-0">
                                 <span class="fs-18 mb-0 fw-500 text-base-color">01</span>
@@ -1976,10 +1981,16 @@
                     }
 
                     hidden = true;
-                    loader.classList.add("is-complete");
+
+                    document.documentElement.classList.remove(
+                        "beyond-page-loading"
+                    );
+
                     document.documentElement.classList.add(
                         "beyond-page-ready"
                     );
+
+                    loader.classList.add("is-complete");
 
                     window.setTimeout(function () {
                         loader.remove();

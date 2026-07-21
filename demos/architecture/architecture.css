@@ -1779,31 +1779,54 @@ body.beyond-video-modal-open {
 
 /* BEGIN BEYOND LEISURE PAGE LOADER */
 
-html:not(.beyond-page-ready),
-html:not(.beyond-page-ready) body {
-    overflow: hidden;
+html.beyond-page-loading body {
+    visibility: hidden;
+    overflow: hidden !important;
+}
+
+html.beyond-page-loading .beyond-page-loader {
+    visibility: visible;
 }
 
 .beyond-page-loader {
     position: fixed;
     inset: 0;
     z-index: 2147483646;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 30px;
+
     visibility: visible;
     opacity: 1;
+
+    /* Fully opaque so no page content appears underneath */
+    background: #111111;
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.beyond-page-loader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
     background:
         radial-gradient(
             circle at center,
-            rgba(122, 0, 55, 0.24) 0%,
-            rgba(17, 17, 17, 0.96) 48%,
+            rgba(122, 0, 55, 0.34) 0%,
+            rgba(17, 17, 17, 0.98) 48%,
             #111111 100%
         );
-    transition:
-        opacity 0.55s ease,
-        visibility 0.55s ease;
+
+    pointer-events: none;
 }
 
 .beyond-page-loader.is-complete {
@@ -1813,42 +1836,57 @@ html:not(.beyond-page-ready) body {
 }
 
 .beyond-page-loader__inner {
+    position: relative;
+    z-index: 1;
+
     width: min(330px, 82vw);
     text-align: center;
 }
 
 .beyond-page-loader__logo {
     display: block;
+
     width: auto;
-    max-width: 210px;
-    max-height: 115px;
-    margin: 0 auto 32px;
+    max-width: 200px;
+    max-height: 110px;
+
+    margin: 0 auto 30px;
+
     object-fit: contain;
-    animation: beyond-loader-pulse 1.8s ease-in-out infinite;
+    animation: beyond-loader-pulse 1.6s ease-in-out infinite;
 }
 
 .beyond-page-loader__track {
     position: relative;
+
     width: 100%;
-    height: 2px;
+    height: 3px;
+
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.14);
+
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .beyond-page-loader__bar {
     position: absolute;
     inset-block: 0;
     left: -45%;
+
     width: 45%;
+
     background: #f4d20b;
-    box-shadow: 0 0 18px rgba(244, 210, 11, 0.52);
-    animation: beyond-loader-travel 1.25s ease-in-out infinite;
+    box-shadow: 0 0 18px rgba(244, 210, 11, 0.5);
+
+    animation: beyond-loader-travel 1.15s ease-in-out infinite;
 }
 
 .beyond-page-loader__text {
     display: block;
+
     margin-top: 18px;
+
     color: rgba(255, 255, 255, 0.72);
+
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -1857,11 +1895,11 @@ html:not(.beyond-page-ready) body {
 }
 
 @keyframes beyond-loader-travel {
-    0% {
+    from {
         left: -45%;
     }
 
-    100% {
+    to {
         left: 100%;
     }
 }
@@ -1892,3 +1930,194 @@ html:not(.beyond-page-ready) body {
 }
 
 /* END BEYOND LEISURE PAGE LOADER */
+
+/* BEGIN BEYOND LEISURE MOBILE HEADER */
+
+@media only screen and (max-width: 991px) {
+    header,
+    header .navbar,
+    header .navbar.header-transparent,
+    header .navbar.disable-fixed {
+        background-color: #111111 !important;
+    }
+
+    header .navbar {
+        min-height: 78px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    header .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    header .navbar-brand img,
+    header .beyond-main-logo {
+        display: block !important;
+        width: auto !important;
+        max-width: 130px !important;
+        max-height: 54px !important;
+        object-fit: contain;
+    }
+
+    header .push-button span {
+        background-color: #f4d20b !important;
+    }
+
+    header .header-push-button {
+        color: #ffffff !important;
+    }
+
+    .push-menu.hamburger-nav {
+        background-color: #111111 !important;
+    }
+}
+
+/* END BEYOND LEISURE MOBILE HEADER */
+
+/* BEGIN BEYOND LEISURE MOBILE HERO */
+
+@media only screen and (max-width: 767px) {
+    #architecture-slider_wrapper,
+    #architecture-slider,
+    #architecture-slider ul,
+    #architecture-slider li {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    #architecture-slider_wrapper,
+    #architecture-slider {
+        min-height: calc(100dvh - 78px) !important;
+        height: calc(100dvh - 78px) !important;
+    }
+
+    #architecture-slider .rev-slidebg {
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    #architecture-slider .architecture-slider-text-row {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 24px 110px !important;
+
+        text-align: left !important;
+    }
+
+    #architecture-slider .architecture-slider-text-row .tp-caption {
+        max-width: 100% !important;
+    }
+
+    #slide-01-layer-03,
+    #slide-02-layer-03,
+    #slide-03-layer-03 {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        font-size: clamp(48px, 15vw, 70px) !important;
+        line-height: 0.9 !important;
+        letter-spacing: -3px !important;
+
+        white-space: normal !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+
+        text-align: left !important;
+    }
+
+    #slide-01-layer-05,
+    #slide-02-layer-05,
+    #slide-03-layer-05 {
+        width: auto !important;
+        max-width: calc(100vw - 48px) !important;
+
+        margin-top: 28px !important;
+        margin-bottom: 0 !important;
+
+        text-align: left !important;
+    }
+
+    #slide-01-layer-06,
+    #slide-02-layer-06,
+    #slide-03-layer-06 {
+        display: none !important;
+    }
+
+    #slide-01-layer-07,
+    #slide-02-layer-07,
+    #slide-03-layer-07,
+    #slide-01-layer-08,
+    #slide-02-layer-08,
+    #slide-03-layer-08 {
+        bottom: 0 !important;
+    }
+
+    #architecture-slider .tp-parallax-wrap,
+    #architecture-slider .tp-loop-wrap,
+    #architecture-slider .tp-mask-wrap {
+        max-width: 100% !important;
+    }
+}
+
+/* END BEYOND LEISURE MOBILE HERO */
+
+/* BEGIN BEYOND LEISURE MOBILE LAYOUT */
+
+@media only screen and (max-width: 767px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container,
+    .container-fluid {
+        max-width: 100%;
+    }
+
+    .page-title-big-typography h1 {
+        font-size: clamp(44px, 14vw, 68px) !important;
+        line-height: 0.95 !important;
+        letter-spacing: -3px !important;
+    }
+
+    .page-title-big-typography h2 {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        letter-spacing: 2px !important;
+    }
+
+    .beyond-contact-detail-card {
+        padding: 25px !important;
+    }
+
+    .contact-form-style-03 {
+        width: 100%;
+    }
+
+    .contact-form-style-03 input,
+    .contact-form-style-03 textarea,
+    .contact-form-style-03 select {
+        font-size: 16px !important;
+    }
+
+    footer .footer-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+}
+
+/* END BEYOND LEISURE MOBILE LAYOUT */

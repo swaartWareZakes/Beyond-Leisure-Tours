@@ -1,6 +1,11 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
     <head>
+        <!-- BEGIN BEYOND LEISURE EARLY LOADER STATE -->
+        <script>
+            document.documentElement.classList.add("beyond-page-loading");
+        </script>
+        <!-- END BEYOND LEISURE EARLY LOADER STATE -->
         <title>A Comfortable Private Journey Around the Cape Peninsula | Beyond Leisure Tours</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -47,7 +52,7 @@
         <link rel="stylesheet" href="css/icon.min.css"/>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/architecture/architecture.css" />
+        <link rel="stylesheet" href="demos/architecture/architecture.css?v=20260721-mobile-3" />
     </head>
     <body class="custom-cursor overflow-x-hidden" data-mobile-nav-style="classic">
         <!-- BEGIN BEYOND LEISURE PAGE LOADER -->
@@ -549,10 +554,16 @@
                     }
 
                     hidden = true;
-                    loader.classList.add("is-complete");
+
+                    document.documentElement.classList.remove(
+                        "beyond-page-loading"
+                    );
+
                     document.documentElement.classList.add(
                         "beyond-page-ready"
                     );
+
+                    loader.classList.add("is-complete");
 
                     window.setTimeout(function () {
                         loader.remove();

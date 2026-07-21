@@ -1,6 +1,11 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
     <head>
+        <!-- BEGIN BEYOND LEISURE EARLY LOADER STATE -->
+        <script>
+            document.documentElement.classList.add("beyond-page-loading");
+        </script>
+        <!-- END BEYOND LEISURE EARLY LOADER STATE -->
         <!-- title -->
         <title>Beyond Leisure Tours - The Multipurpose HTML5 Template</title>
         <meta charset="utf-8">
@@ -695,10 +700,16 @@
                     }
 
                     hidden = true;
-                    loader.classList.add("is-complete");
+
+                    document.documentElement.classList.remove(
+                        "beyond-page-loading"
+                    );
+
                     document.documentElement.classList.add(
                         "beyond-page-ready"
                     );
+
+                    loader.classList.add("is-complete");
 
                     window.setTimeout(function () {
                         loader.remove();
