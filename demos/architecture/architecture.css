@@ -1762,3 +1762,133 @@ body.beyond-video-modal-open {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+/* Netlify form honeypot */
+.beyond-form-honeypot {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+/* BEGIN BEYOND LEISURE PAGE LOADER */
+
+html:not(.beyond-page-ready),
+html:not(.beyond-page-ready) body {
+    overflow: hidden;
+}
+
+.beyond-page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483646;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    visibility: visible;
+    opacity: 1;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(122, 0, 55, 0.24) 0%,
+            rgba(17, 17, 17, 0.96) 48%,
+            #111111 100%
+        );
+    transition:
+        opacity 0.55s ease,
+        visibility 0.55s ease;
+}
+
+.beyond-page-loader.is-complete {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.beyond-page-loader__inner {
+    width: min(330px, 82vw);
+    text-align: center;
+}
+
+.beyond-page-loader__logo {
+    display: block;
+    width: auto;
+    max-width: 210px;
+    max-height: 115px;
+    margin: 0 auto 32px;
+    object-fit: contain;
+    animation: beyond-loader-pulse 1.8s ease-in-out infinite;
+}
+
+.beyond-page-loader__track {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.beyond-page-loader__bar {
+    position: absolute;
+    inset-block: 0;
+    left: -45%;
+    width: 45%;
+    background: #f4d20b;
+    box-shadow: 0 0 18px rgba(244, 210, 11, 0.52);
+    animation: beyond-loader-travel 1.25s ease-in-out infinite;
+}
+
+.beyond-page-loader__text {
+    display: block;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+@keyframes beyond-loader-travel {
+    0% {
+        left: -45%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes beyond-loader-pulse {
+    0%,
+    100% {
+        opacity: 0.72;
+        transform: scale(0.98);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .beyond-page-loader__logo,
+    .beyond-page-loader__bar {
+        animation: none;
+    }
+
+    .beyond-page-loader__bar {
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* END BEYOND LEISURE PAGE LOADER */

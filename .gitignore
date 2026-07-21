@@ -16,3 +16,5 @@ _template-backup/
 prompts/
 *.original.mp4
 *.optimized.mp4
+*.before-netlify-form
+*.before-page-loader

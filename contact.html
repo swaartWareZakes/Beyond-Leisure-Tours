@@ -49,7 +49,33 @@
         <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="demos/architecture/architecture.css" />
     </head>
-    <body class="custom-cursor overflow-x-hidden" data-mobile-nav-style="classic">  
+    <body class="custom-cursor overflow-x-hidden" data-mobile-nav-style="classic">
+        <!-- BEGIN BEYOND LEISURE PAGE LOADER -->
+        <div
+            id="beyond-page-loader"
+            class="beyond-page-loader"
+            role="status"
+            aria-live="polite"
+            aria-label="Loading Beyond Leisure Tours"
+        >
+            <div class="beyond-page-loader__inner">
+                <img
+                    src="images/beyond-leisure/logo.png"
+                    class="beyond-page-loader__logo"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <div class="beyond-page-loader__track">
+                    <span class="beyond-page-loader__bar"></span>
+                </div>
+
+                <span class="beyond-page-loader__text">
+                    Preparing your journey
+                </span>
+            </div>
+        </div>
+        <!-- END BEYOND LEISURE PAGE LOADER -->  
         <!-- start cursor -->
         <div class="cursor-page-inner">
             <div class="circle-cursor circle-cursor-inner"></div>
@@ -272,7 +298,30 @@
                 <div class="row justify-content-center overlap-section overlap-section-three-fourth mb-6">
                     <div class="col-lg-10">
                         <div class="p-9 sm-p-7 bg-nero-grey">
-                            <form action="email-templates/contact-form.php" method="post" class="contact-form-style-03">
+                            <form
+                                name="travel-enquiry"
+                                method="POST"
+                                action="/thank-you.html"
+                                class="contact-form-style-03"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="travel-enquiry"
+                                >
+
+                                <p class="beyond-form-honeypot" aria-hidden="true">
+                                    <label>
+                                        Do not fill this out:
+                                        <input
+                                            name="bot-field"
+                                            tabindex="-1"
+                                            autocomplete="off"
+                                        >
+                                    </label>
+                                </p>
                                 <div class="row justify-content-center">
                                     <div class="col-md-9 mb-7 xs-mb-30px">
                                         <h4 class="text-white fw-600 mb-0"><span class="text-base-color">Let's travel.</span> Tell us about your journey.</h4>
@@ -351,7 +400,7 @@
                                     <div class="col-12 mb-5">
                                         <label for="exampleInputEmail1" class="form-label fs-11 ls-2px text-uppercase text-white mb-0">Your message</label>
                                         <div class="position-relative form-group form-textarea mb-0"> 
-                                            <textarea class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control" name="comment" placeholder="Tell us your pickup point, destination, travel date, preferred time, passenger count and luggage requirements" rows="4"></textarea>
+                                            <textarea class="fs-15 ps-0 border-radius-0px border-color-charcoal-grey bg-transparent form-control" name="comment" placeholder="Tell us your pickup point, destination, travel date, preferred time, passenger count and luggage requirements" rows="4" required></textarea>
                                             <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
                                         </div>
                                     </div>
@@ -359,8 +408,7 @@
                                         <p class="mb-0 fs-14 lh-24 w-90 xl-w-100">Your enquiry details will only be used to respond to your transport request and help plan your journey.</p>
                                     </div>
                                     <div class="col-xl-5 col-md-4 text-center text-md-end">
-                                        <input id="exampleInputEmail5" type="hidden" name="redirect" value="">
-                                        <button class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700 submit" type="submit">Send message</button>
+                                        <button class="btn btn-small btn-base-color btn-box-shadow btn-round-edge-small primary-font fw-700" type="submit">Send message</button>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-results mt-20px d-none"></div>
@@ -469,5 +517,46 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+    <!-- BEGIN BEYOND LEISURE PAGE LOADER SCRIPT -->
+        <script>
+            (function () {
+                const loader = document.getElementById(
+                    "beyond-page-loader"
+                );
+
+                if (!loader) {
+                    return;
+                }
+
+                let hidden = false;
+
+                function hideLoader() {
+                    if (hidden) {
+                        return;
+                    }
+
+                    hidden = true;
+                    loader.classList.add("is-complete");
+                    document.documentElement.classList.add(
+                        "beyond-page-ready"
+                    );
+
+                    window.setTimeout(function () {
+                        loader.remove();
+                    }, 650);
+                }
+
+                window.addEventListener(
+                    "load",
+                    function () {
+                        window.setTimeout(hideLoader, 180);
+                    },
+                    { once: true }
+                );
+
+                window.setTimeout(hideLoader, 8000);
+            })();
+        </script>
+        <!-- END BEYOND LEISURE PAGE LOADER SCRIPT -->
     </body>
 </html>
