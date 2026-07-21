@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /_template-backup/
+Disallow: /.netlify/
+
+Sitemap: https://beyondleisuretours.co.za/sitemap.xml

@@ -1,0 +1,1764 @@
+/* ===================================
+    Beyond Leisure Tours - Architecture
+====================================== */
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+/* variable */
+:root {     
+    --base-color: #efff02;
+    --dark-gray:#191919;
+    --medium-gray:#737373;
+    --extra-medium-gray:#707070;
+    --alt-font: 'Antonio', sans-serif;
+    --primary-font: 'Plus Jakarta Sans', sans-serif;
+} 
+html {
+    overflow-x: hidden;
+}
+body{
+    line-height: 30px;
+}
+/* reset */
+.word-break-normal {
+    word-break: normal;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 25px;
+}
+h1, .h1 {
+    line-height: 4.6rem;
+}
+h2 {
+    line-height: 3.7rem;
+}
+h3 {
+    line-height: 3.4rem;
+}
+h4 {
+    line-height: 3rem;
+}
+h5 {
+    line-height: 2.5rem;
+}
+h6 {
+    line-height: 2.3rem;
+}
+/* header */ 
+header .widget-text {
+    font-size: 15px;
+}
+header .navbar-brand {
+    padding: 28px 0;
+}
+header.sticky .disable-fixed .navbar-brand {
+    padding: 18px 0;
+}
+header .navbar-brand img {
+    max-height: 60px;
+}
+.hamburger-logo img {
+    max-height: 85px;
+}
+.header-icon .header-social-icon a {
+    font-size: 17px;
+    padding-left: 15px;
+    font-weight: 600;
+}
+header.sticky .navbar {
+    min-height: 70px;
+}
+.hamburger-menu-simple .menu-item-list .nav-link {
+    font-size: 55px;
+    line-height: 50px;
+}
+header .elements-social ul li {
+    margin-right: 25px;
+    margin-left: 0;
+}
+header .elements-social ul li a {
+    width: auto;
+    height: auto;
+}
+/* revolution slider */
+#architecture-slider .tp-splitted {
+    text-align: inherit !important;
+}
+.magic-cursor-base-color #ball-cursor:before, .magic-cursor-base-color #ball-cursor:after {
+    color: var(--dark-gray);  
+}
+/* tag */
+.blog-comment li .btn-reply:hover {
+    color: var(--dark-gray);
+}
+.tag-cloud a:hover, .tag-cloud a.active {
+    border-color: var(--white);
+}
+.blog-comment li .btn-reply {
+    border: 1px solid var(--extra-medium-gray);
+    background-color: transparent;
+}
+.blog-comment li .btn-reply {
+    padding: 6px 20px 7px;
+}
+.categories-btn {
+    padding: 4px 18px;
+    border-radius: 24px;
+}
+/* first letter block  */ 
+.first-letter-block {
+    line-height: 88px;
+}
+/* top right bottom left */
+.top-25 {
+    top: 25%;
+}
+.right-18 {
+    right: 18%;
+}
+/* text color */ 
+.text-nero-grey {
+    color: #1F1F1F;
+}
+.text-charcoal {
+    color: #282828;
+}
+/* bg color */ 
+.bg-nero-grey {
+    background-color: #1F1F1F;
+}
+.bg-dark-gray-transparent {
+    background-color:rgba(25, 25, 25,.7);
+}
+.bg-charcoal-grey {
+    background-color: #3E3E3E;
+}
+.bg-base-color-transparent {
+    background-color: rgba(239, 255, 2,.2);
+}
+.bg-gradient-dark-transparent {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(-4%, #101010), to(transparent));
+    background: linear-gradient(to top, #101010 -4%, transparent 100%);
+}
+.bg-gradient-dark-gray-transparent {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(25, 25, 25, 1)), to(transparent));
+    background-image: linear-gradient(to top, rgba(25, 25, 25, .9) 20%, transparent 90%);
+}
+/* border color */
+.border-color-charcoal-grey {
+    border-color: #3E3E3E !important;
+}
+/* slider navigation*/
+.slider-navigation-style-07 {
+    left: 58.4%;
+}
+/* btn */ 
+.btn.btn-base-color, .btn.btn-box-shadow.btn-base-color:hover {
+    color: var(--dark-gray);  
+}
+.btn.btn-link {
+    padding: 0 0 2px;
+    font-weight: 600;
+}
+.btn { 
+    font-family: var(--primary-font);
+}
+/* page title */
+.page-title-extra-small h1 {
+    font-size: 5.375rem;
+    line-height: 5.5rem;
+}
+.page-title-extra-small h2 {
+    font-size: 13px;
+    line-height: 26px;
+}
+/* footer */
+footer .footer-logo img {
+    max-height: 70px;
+}
+footer .elements-social li {
+    margin: 0 15px 0 0;
+}
+.video-icon-extra-large .video-icon {
+    width: 170px;
+    height: 170px;
+    font-size: 16px;
+}
+/* magic cursor */
+.magic-drag-cursor #ball-cursor:before {
+  font-size: 15px;
+}
+/* media query responsive */
+@media (max-width: 1430px) {
+    .architecture-number {
+        display: none !important;
+    }
+}
+@media (orientation: landscape) and (max-width: 1080px) {
+    .architecture-slider-text-row {
+        margin-top: 200px !important;
+    }
+}
+@media (orientation: landscape) and (max-width: 850px) {
+    .architecture-slider-text-row { 
+        margin-bottom: 200px !important;
+    }
+}
+@media (orientation: landscape) and (max-width: 768px) {
+    .architecture-slider-text-row {
+        margin-top: 200px !important;
+        margin-bottom: 200px !important; 
+    }
+}
+@media (max-width: 991px) {
+    .interactive-banner-style-06 .interactive-banners-content {
+        transform: translateY(calc(100% - 100px));
+    }
+    .md-right-0 {
+        right: 0;
+    }
+    header .navbar-brand {
+        padding: 20px 0;
+    }
+}
+@media (max-width: 767px) {
+    .video-icon-extra-large .video-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .slider-navigation-style-07 {
+        left: 0;
+    }
+    .interactive-banner-style-06 .interactive-banners-content {
+        transform: translateY(calc(100% - 110px));
+    }
+    .hamburger-menu-simple .menu-item-list .nav-link {
+        font-size: 38px;
+        line-height: 34px;
+    }
+}
+
+/* BEGIN BEYOND LEISURE PALETTE */
+
+:root {
+    --bl-maroon: #7A0037;
+    --bl-maroon-dark: #16000B;
+    --bl-yellow: #F4D20B;
+    --bl-white: #FFFFFF;
+
+    /* restored dark base */
+    --bl-bg-main: #111111;
+    --bl-bg-panel: #1a1a1a;
+    --bl-bg-soft: #222222;
+    --bl-text-muted: #9a9a9a;
+}
+
+/* ============================================================
+   CORE COLOURS
+   ============================================================ */
+.bg-base-color {
+    background-color: var(--bl-yellow) !important;
+}
+
+.text-base-color {
+    color: var(--bl-yellow) !important;
+}
+
+.border-color-base-color {
+    border-color: var(--bl-yellow) !important;
+}
+
+.text-outline-color-base-color {
+    -webkit-text-stroke-color: var(--bl-yellow) !important;
+}
+
+/* restore dark backgrounds */
+.bg-dark-gray {
+    background-color: var(--bl-bg-main) !important;
+}
+
+.bg-nero-grey {
+    background-color: var(--bl-bg-panel) !important;
+}
+
+.text-nero-grey {
+    color: #2d2d2d !important;
+}
+
+/* general body feel */
+body,
+section,
+footer {
+    background-color: transparent;
+    color: #d7d7d7;
+}
+
+/* ============================================================
+   MENU / NAV
+   ============================================================ */
+.push-menu {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(17, 17, 17, 0.98) 0%,
+            rgba(24, 24, 24, 0.98) 65%,
+            rgba(122, 0, 55, 0.92) 100%
+        ) !important;
+}
+
+.push-menu .menu-item a:hover,
+.push-menu .menu-item a:focus,
+.push-menu .menu-item.active a {
+    color: var(--bl-yellow) !important;
+}
+
+/* ============================================================
+   BUTTONS / LINKS
+   ============================================================ */
+.rev-btn.bg-base-color {
+    background-color: var(--bl-yellow) !important;
+    color: #111111 !important;
+}
+
+.btn.btn-dark-gray,
+.btn-switch-text.bg-dark-gray {
+    background-color: #1f1f1f !important;
+    border-color: #1f1f1f !important;
+    color: #ffffff !important;
+}
+
+.btn.btn-dark-gray:hover,
+.btn-switch-text.bg-dark-gray:hover {
+    background-color: var(--bl-maroon) !important;
+    border-color: var(--bl-maroon) !important;
+    color: var(--bl-white) !important;
+}
+
+a:hover,
+a:focus {
+    color: var(--bl-yellow);
+}
+
+.categories-btn:hover {
+    background-color: var(--bl-yellow) !important;
+    color: #111111 !important;
+}
+
+/* ============================================================
+   HERO / SLIDER
+   ============================================================ */
+.architecture-number {
+    color: transparent !important;
+    -webkit-text-stroke-color: var(--bl-yellow) !important;
+}
+
+/* slightly darker image overlays instead of maroon wash */
+.overlay-bg.bg-gradient-dark-transparent,
+.box-overlay.bg-gradient-dark-transparent {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.10) 0%,
+            rgba(0, 0, 0, 0.52) 65%,
+            rgba(0, 0, 0, 0.78) 100%
+        ) !important;
+}
+
+/* ============================================================
+   WHERE THE MAROON NOW LIVES
+   ============================================================ */
+
+/* content tiles and accent panels */
+.interactive-banner-style-06 .interactive-banners-content {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(122, 0, 55, 0.14) 0%,
+            rgba(18, 18, 18, 0.90) 100%
+        );
+}
+
+/* small accent bar look */
+.interactive-banner-style-06 .banners-icon {
+    background-color: rgba(122, 0, 55, 0.45);
+    border-radius: 50%;
+}
+
+/* testimonial / quote accent */
+.swiper-slide .text-base-color,
+.text-highlight,
+.highlight-accent {
+    color: var(--bl-yellow) !important;
+}
+
+/* blog cards get the maroon accent instead of full page */
+.blog-metro .blog-overlay {
+    background:
+        linear-gradient(
+            to top,
+            rgba(122, 0, 55, 0.65) 0%,
+            rgba(0, 0, 0, 0.18) 70%,
+            rgba(0, 0, 0, 0.02) 100%
+        ) !important;
+}
+
+/* featured content panel */
+.swiper-slide-content .bg-white {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fff7fb 100%
+        ) !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background:
+        linear-gradient(
+            180deg,
+            #101010 0%,
+            #111111 72%,
+            #1a0a12 100%
+        ) !important;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--bl-yellow) !important;
+}
+
+/* subtle maroon separators / accents */
+footer .separator-line,
+footer .border-color-extra-medium-gray,
+.border-color-charcoal-grey {
+    border-color: rgba(122, 0, 55, 0.45) !important;
+}
+
+/* ============================================================
+   REPLACE OLD NEON GREEN FEEL
+   ============================================================ */
+[style*="#efff02"],
+[style*="#EFFF02"],
+[style*="rgb(239,255,2)"],
+[style*="rgb(239, 255, 2)"] {
+    color: var(--bl-yellow) !important;
+    border-color: var(--bl-yellow) !important;
+}
+
+/* END BEYOND LEISURE PALETTE */
+
+/* BEGIN BEYOND LEISURE DARK REFINEMENTS */
+
+/* keep dotted dark sections feeling clean */
+.background-position-center-top.bg-dark-gray,
+section.bg-dark-gray {
+    background-color: #111111 !important;
+}
+
+/* make big outline words more subtle */
+.text-outline {
+    opacity: 0.16 !important;
+}
+
+/* intro/about side block */
+[class*="bg-"] .alt-font,
+.alt-font.text-dark-gray {
+    word-break: normal;
+}
+
+/* reduce overly pink gradients if any came from earlier changes */
+[style*="7A0037"],
+[style*="#7A0037"] {
+    filter: none;
+}
+
+/* card panels */
+.interactive-banner-style-06 {
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* cleaner copy readability */
+p,
+span.fw-500,
+span.fw-400 {
+    color: inherit;
+}
+
+/* stats strip */
+.counter-style-04,
+.counter-style-04 * {
+    color: inherit;
+}
+
+.counter-style-04 .text-base-color {
+    color: var(--bl-yellow) !important;
+}
+
+/* quote section */
+.swiper-pagination-progressbar-fill,
+.swiper-horizontal > .swiper-pagination-progressbar {
+    background-color: var(--bl-yellow) !important;
+}
+
+/* maroon underlines and accent lines */
+.separator-line-1px,
+.separator-line-2px,
+.bg-base-color.separator-line,
+.bg-base-color.h-1px,
+.bg-base-color.h-2px {
+    background-color: var(--bl-maroon) !important;
+}
+
+/* keep footer readable */
+footer p,
+footer span,
+footer li,
+footer a {
+    color: #c8c8c8;
+}
+
+/* END BEYOND LEISURE DARK REFINEMENTS */
+
+/* BEGIN BEYOND LEISURE SERVICE CARDS */
+
+/*
+ * The former architecture client-logo row does not add value
+ * for the travel service section.
+ */
+.clients-style-06 {
+    display: none !important;
+}
+
+/*
+ * Consistent card proportions throughout the carousel.
+ */
+.beyond-service-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.beyond-service-card .interactive-banners-image {
+    aspect-ratio: 410 / 505;
+    overflow: hidden;
+}
+
+.beyond-service-card .interactive-banners-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.beyond-service-card:hover .interactive-banners-image img {
+    transform: scale(1.045);
+}
+
+/*
+ * Actual service icon rather than a separate image/logo strip.
+ */
+.beyond-service-icon {
+    width: 58px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(122, 0, 55, 0.92);
+    border: 1px solid rgba(244, 210, 11, 0.7);
+    color: #F4D20B !important;
+    z-index: 3;
+}
+
+.beyond-service-icon i {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.beyond-service-icon:hover {
+    background-color: #F4D20B;
+    color: #16000B !important;
+}
+
+/*
+ * Keep each card's text area visually balanced.
+ */
+.beyond-service-card .interactive-banners-content {
+    min-height: 190px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(122, 0, 55, 0.18) 0%,
+            rgba(17, 17, 17, 0.98) 100%
+        );
+}
+
+.beyond-service-card .interactive-banners-content-text {
+    color: rgba(255, 255, 255, 0.70);
+    line-height: 1.65;
+}
+
+/*
+ * Better carousel spacing on desktop and mobile.
+ */
+@media only screen and (max-width: 767px) {
+    .beyond-service-card .interactive-banners-content {
+        min-height: 165px;
+    }
+}
+
+/* END BEYOND LEISURE SERVICE CARDS */
+
+/* BEGIN BEYOND LEISURE SERVICE ICON STRIP */
+
+.beyond-service-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 55px;
+    padding: 0 15px;
+}
+
+.beyond-service-strip__item {
+    min-height: 150px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+    text-decoration: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0%,
+            rgba(122, 0, 55, 0.14) 100%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.beyond-service-strip__item:hover,
+.beyond-service-strip__item:focus {
+    transform: translateY(-5px);
+    border-color: rgba(244, 210, 11, 0.55);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(244, 210, 11, 0.07) 0%,
+            rgba(122, 0, 55, 0.22) 100%
+        );
+}
+
+.beyond-service-strip__icon {
+    width: 68px;
+    height: 68px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #F4D20B;
+    background-color: rgba(122, 0, 55, 0.50);
+    border: 1px solid rgba(244, 210, 11, 0.55);
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.beyond-service-strip__icon i {
+    font-size: 27px;
+    line-height: 1;
+}
+
+.beyond-service-strip__item:hover .beyond-service-strip__icon,
+.beyond-service-strip__item:focus .beyond-service-strip__icon {
+    color: #16000B;
+    background-color: #F4D20B;
+    transform: scale(1.06);
+}
+
+.beyond-service-strip__label {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/*
+ * Re-enable the old row only if Crafto still outputs it elsewhere.
+ * The new icon strip is the visible replacement.
+ */
+.clients-style-06 {
+    display: none !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .beyond-service-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .beyond-service-strip {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 38px;
+    }
+
+    .beyond-service-strip__item {
+        min-height: 125px;
+        padding: 22px 18px;
+    }
+
+    .beyond-service-strip__icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .beyond-service-strip__icon i {
+        font-size: 23px;
+    }
+}
+
+/* END BEYOND LEISURE SERVICE ICON STRIP */
+
+/* BEGIN BEYOND LEISURE LOGO STYLES */
+
+.navbar-brand .beyond-main-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.hamburger-logo .beyond-menu-logo {
+    width: 92px !important;
+    height: 92px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+.beyond-footer-logo {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+footer img[src*="beyond-leisure/logo.png"] {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-brand .beyond-main-logo {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .navbar-brand .beyond-main-logo {
+        width: 46px;
+        height: 46px;
+        border-radius: 11px;
+    }
+}
+
+/* END BEYOND LEISURE LOGO STYLES */
+
+/* BEGIN BEYOND LEISURE TRUST BADGE */
+
+.beyond-trust-badge {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    z-index: 5;
+    flex: 0 0 auto;
+    margin-inline: auto;
+    animation: none !important;
+    transform: none !important;
+}
+
+.beyond-trust-badge__svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+}
+
+.beyond-trust-badge__outer {
+    fill: #FFFFFF;
+    stroke: rgba(255, 255, 255, 0.18);
+    stroke-width: 2;
+}
+
+.beyond-trust-badge__ring {
+    fill: none;
+    stroke: rgba(122, 0, 55, 0.18);
+    stroke-width: 1;
+}
+
+.beyond-trust-badge__rotor {
+    transform-box: view-box;
+    transform-origin: 120px 120px;
+    animation: beyondTrustRingRotate 32s linear infinite;
+}
+
+.beyond-trust-badge__ring-text {
+    fill: #16000B;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.beyond-trust-badge__centre {
+    fill: #F4D20B;
+    stroke: #16000B;
+    stroke-width: 2;
+}
+
+.beyond-trust-badge__number {
+    fill: #16000B;
+    font-family: inherit;
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.beyond-trust-badge__label {
+    fill: #16000B;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.beyond-trust-badge:hover .beyond-trust-badge__rotor {
+    animation-play-state: paused;
+}
+
+@keyframes beyondTrustRingRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*
+ * Give the badge enough room so it does not clash with the
+ * oversized decorative background text.
+ */
+.beyond-trust-badge {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .beyond-trust-badge {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-trust-badge {
+        width: 150px;
+        height: 150px;
+        margin-top: 30px;
+    }
+
+    .beyond-trust-badge__ring-text {
+        font-size: 11px;
+    }
+}
+
+/* END BEYOND LEISURE TRUST BADGE */
+
+/* BEGIN BEYOND LEISURE QUOTE SECTION FIX */
+
+/*
+ * Prevent the large decorative wording from fighting with
+ * the trust badge and testimonial.
+ */
+.half-section .text-outline,
+.half-section .fs-200,
+.half-section .fs-140 {
+    opacity: 0.08 !important;
+}
+
+/*
+ * Improve vertical separation around the carousel progress line.
+ */
+.half-section .swiper-pagination-progressbar,
+.half-section .swiper-pagination {
+    margin-bottom: 28px;
+}
+
+/*
+ * Keep the actual testimonial above the background wording.
+ */
+.half-section .swiper,
+.half-section .swiper-wrapper,
+.half-section .swiper-slide {
+    position: relative;
+    z-index: 3;
+}
+
+/*
+ * Avoid clipping the badge while the outer text ring rotates.
+ */
+.half-section,
+.half-section .container,
+.half-section .row {
+    overflow: visible !important;
+}
+
+/* END BEYOND LEISURE QUOTE SECTION FIX */
+
+/* BEGIN BEYOND LEISURE ABOUT PAGE */
+
+.beyond-about-hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.beyond-about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.48) 58%,
+            rgba(17, 17, 17, 0.88) 100%
+        );
+}
+
+.beyond-about-collage-image {
+    width: 100%;
+    aspect-ratio: 410 / 505;
+    object-fit: cover;
+}
+
+.beyond-about-gallery-image {
+    width: 100%;
+    aspect-ratio: 420 / 500;
+    object-fit: cover;
+    display: block;
+}
+
+.about-values-row .client-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-value-card,
+.about-service-value-card {
+    width: 100%;
+    min-height: 120px;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    color: #FFFFFF;
+    text-align: center;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0%,
+            rgba(122, 0, 55, 0.17) 100%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.about-value-card i,
+.about-service-value-card i {
+    color: #F4D20B;
+    font-size: 28px;
+}
+
+.about-value-card span,
+.about-service-value-card span {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.about-value-card:hover,
+.about-service-value-card:hover {
+    color: #FFFFFF;
+    transform: translateY(-4px);
+    border-color: rgba(244, 210, 11, 0.55);
+    background-color: rgba(122, 0, 55, 0.24);
+}
+
+.about-role-icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #16000B;
+    background-color: #F4D20B;
+    border-radius: 50%;
+}
+
+.about-role-icon i {
+    font-size: 15px;
+}
+
+.team-style-08 figure > img {
+    width: 100%;
+    aspect-ratio: 480 / 605;
+    object-fit: cover;
+}
+
+.about-service-values-row {
+    position: relative;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 767px) {
+    .about-value-card,
+    .about-service-value-card {
+        min-height: 105px;
+        margin-bottom: 18px;
+    }
+}
+
+/* END BEYOND LEISURE ABOUT PAGE */
+
+/* BEGIN BEYOND LEISURE SERVICES PAGE */
+
+.beyond-services-hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.beyond-services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.20) 0%,
+            rgba(0, 0, 0, 0.48) 60%,
+            rgba(17, 17, 17, 0.90) 100%
+        );
+}
+
+.beyond-service-enquiry {
+    text-decoration: none;
+}
+
+.beyond-service-page-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.beyond-service-page-card .interactive-banners-image {
+    aspect-ratio: 410 / 505;
+    overflow: hidden;
+}
+
+.beyond-service-page-card .interactive-banners-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+.beyond-service-page-card:hover .interactive-banners-image img {
+    transform: scale(1.045);
+}
+
+.beyond-service-page-icon {
+    width: 58px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    color: #F4D20B !important;
+    background-color: rgba(122, 0, 55, 0.92);
+    border: 1px solid rgba(244, 210, 11, 0.70);
+    border-radius: 50%;
+}
+
+.beyond-service-page-icon i {
+    font-size: 22px;
+}
+
+.beyond-service-page-icon:hover {
+    color: #16000B !important;
+    background-color: #F4D20B;
+}
+
+.beyond-service-page-card .interactive-banners-content {
+    min-height: 205px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(122, 0, 55, 0.15) 0%,
+            rgba(17, 17, 17, 0.98) 100%
+        );
+}
+
+.beyond-service-page-card .interactive-banners-content-text {
+    color: rgba(255, 255, 255, 0.70);
+    line-height: 1.65;
+}
+
+.beyond-services-support-image {
+    width: 100%;
+    aspect-ratio: 410 / 505;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-service-page-card .interactive-banners-content {
+        min-height: 175px;
+    }
+}
+
+/* END BEYOND LEISURE SERVICES PAGE */
+
+/* BEGIN BEYOND LEISURE EXPERIENCES PAGE */
+
+.beyond-experiences-hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.beyond-experiences-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.18) 0%,
+            rgba(0, 0, 0, 0.48) 62%,
+            rgba(17, 17, 17, 0.92) 100%
+        );
+}
+
+.beyond-experience-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.beyond-experience-card .portfolio-image {
+    position: relative;
+    aspect-ratio: 800 / 1005;
+    overflow: hidden;
+}
+
+.beyond-experience-card .portfolio-image > a,
+.beyond-experience-card .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.beyond-experience-card .portfolio-image img {
+    object-fit: cover;
+    transition:
+        transform 0.65s ease,
+        filter 0.65s ease;
+}
+
+.beyond-experience-card:hover .portfolio-image img {
+    transform: scale(1.055);
+    filter: brightness(0.58);
+}
+
+.beyond-experience-overlay {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    padding: 32px;
+    color: #FFFFFF;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(25px);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(22, 0, 11, 0.92) 58%,
+            rgba(22, 0, 11, 0.98) 100%
+        );
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.beyond-experience-card:hover .beyond-experience-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.beyond-experience-number {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #F4D20B;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.beyond-experience-overlay p {
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.6;
+}
+
+.beyond-experience-enquire {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.beyond-experience-enquire:hover {
+    color: #F4D20B;
+}
+
+@media only screen and (max-width: 991px) {
+    .beyond-experience-overlay {
+        opacity: 1;
+        transform: none;
+        padding: 25px;
+    }
+
+    .beyond-experience-card .portfolio-image img {
+        filter: brightness(0.68);
+    }
+}
+
+/* END BEYOND LEISURE EXPERIENCES PAGE */
+
+/* BEGIN BEYOND LEISURE EXPERIENCE DETAILS */
+
+.beyond-experience-detail-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 56vh;
+    background-position: center;
+}
+
+.beyond-experience-detail-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.35) 60%,
+            rgba(17, 17, 17, 0.88) 100%
+        );
+}
+
+.beyond-detail-slider-image {
+    width: 100%;
+    height: min(700px, 68vw);
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.beyond-detail-values {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.beyond-detail-values > div {
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #FFFFFF;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0%,
+            rgba(122, 0, 55, 0.18) 100%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.beyond-detail-values i {
+    color: #F4D20B;
+    font-size: 27px;
+}
+
+.beyond-detail-values span {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.image-gallery-style-01 .gallery-image img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.beyond-next-experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    isolation: isolate;
+}
+
+.beyond-next-experience::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22) 0%,
+            rgba(0, 0, 0, 0.74) 100%
+        );
+}
+
+.beyond-next-experience__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.beyond-next-experience__link span {
+    color: #F4D20B;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.beyond-next-experience__link strong {
+    max-width: 900px;
+    color: #FFFFFF;
+    font-family: var(--alt-font);
+    font-size: clamp(38px, 6vw, 88px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.beyond-next-experience__link i {
+    width: 55px;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: #16000B;
+    background-color: #F4D20B;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-detail-values {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .beyond-detail-slider-image {
+        min-height: 320px;
+    }
+}
+
+/* END BEYOND LEISURE EXPERIENCE DETAILS */
+
+/* BEGIN BEYOND LEISURE ARTICLES PAGE */
+
+.beyond-articles-hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.beyond-articles-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.18) 0%,
+            rgba(0, 0, 0, 0.48) 62%,
+            rgba(17, 17, 17, 0.92) 100%
+        );
+}
+
+.beyond-article-card {
+    aspect-ratio: 1;
+    background-color: #181818;
+}
+
+.beyond-article-card .blog-image,
+.beyond-article-card .blog-image > a,
+.beyond-article-card .blog-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.beyond-article-card .blog-image img {
+    object-fit: cover;
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.beyond-article-card:hover .blog-image img {
+    transform: scale(1.055);
+    filter: brightness(0.65);
+}
+
+.beyond-article-card .blog-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.04) 0%,
+            rgba(0, 0, 0, 0.12) 40%,
+            rgba(22, 0, 11, 0.92) 100%
+        ) !important;
+}
+
+.beyond-article-card .categories-btn {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.beyond-article-card:hover .categories-btn {
+    color: #16000B !important;
+    background-color: #F4D20B !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-article-card {
+        min-height: 430px;
+    }
+}
+
+/* END BEYOND LEISURE ARTICLES PAGE */
+
+/* BEGIN BEYOND LEISURE CONTACT PAGE */
+
+.beyond-contact-hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.beyond-contact-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.18) 0%,
+            rgba(0, 0, 0, 0.50) 62%,
+            rgba(17, 17, 17, 0.92) 100%
+        );
+}
+
+.beyond-contact-info {
+    position: relative;
+}
+
+.beyond-contact-detail-card {
+    height: 100%;
+    min-height: 225px;
+    padding: 34px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0%,
+            rgba(122, 0, 55, 0.16) 100%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.beyond-contact-detail-card a:hover {
+    color: #F4D20B !important;
+}
+
+.beyond-contact-map {
+    min-height: 520px;
+    overflow: hidden;
+    background-color: #171717;
+}
+
+.beyond-contact-map iframe {
+    display: block;
+    width: 100%;
+    min-height: 520px;
+    filter:
+        grayscale(1)
+        contrast(1.05)
+        brightness(0.72);
+}
+
+.beyond-contact-form-logo {
+    width: auto;
+    max-width: 164px;
+    object-fit: contain;
+}
+
+.contact-form-style-03 select.form-control {
+    height: 57px;
+    padding-left: 38px !important;
+    color: rgba(255, 255, 255, 0.78);
+    appearance: none;
+}
+
+.contact-form-style-03 select.form-control option {
+    color: #FFFFFF;
+    background-color: #171717;
+}
+
+.contact-form-style-03 input[type="date"] {
+    color-scheme: dark;
+}
+
+@media only screen and (max-width: 991px) {
+    .beyond-contact-detail-card {
+        min-height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-contact-map,
+    .beyond-contact-map iframe {
+        min-height: 400px;
+        height: 400px;
+    }
+}
+
+/* END BEYOND LEISURE CONTACT PAGE */
+
+/* BEGIN BEYOND LEISURE VIDEO MODAL */
+
+body.beyond-video-modal-open {
+    overflow: hidden;
+}
+
+.beyond-video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.94);
+}
+
+.beyond-video-modal.is-open {
+    display: flex;
+}
+
+.beyond-video-modal__content {
+    width: min(1100px, 100%);
+    max-height: calc(100vh - 90px);
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 25px 90px rgba(0, 0, 0, 0.65);
+}
+
+.beyond-video-modal__player {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 90px);
+    background-color: #000;
+}
+
+.beyond-video-modal__close {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #16000b;
+    background-color: #f4d20b;
+    border: 0;
+    border-radius: 50%;
+    font-size: 21px;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.beyond-video-modal__close:hover {
+    transform: scale(1.08);
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+    .beyond-video-modal {
+        padding: 15px;
+    }
+
+    .beyond-video-modal__close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .beyond-video-modal__content,
+    .beyond-video-modal__player {
+        max-height: calc(100vh - 60px);
+    }
+}
+
+/* END BEYOND LEISURE VIDEO MODAL */
+
+/* Portrait local video sizing */
+.beyond-video-modal__content {
+    width: min(520px, 92vw);
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+
+.beyond-video-modal__player {
+    width: auto;
+    max-width: 100%;
+    height: min(82vh, 832px);
+    max-height: 82vh;
+    object-fit: contain;
+}
+
+/* FINAL LOCAL VIDEO VISIBILITY OVERRIDE */
+.beyond-video-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 2147483647 !important;
+
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 20px !important;
+    background: rgba(0, 0, 0, 0.96) !important;
+
+    transform: none !important;
+    pointer-events: none !important;
+}
+
+.beyond-video-modal.is-open {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.beyond-video-modal__content {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: min(520px, 92vw) !important;
+    height: auto !important;
+    max-height: 88vh !important;
+
+    overflow: hidden !important;
+    background: #000 !important;
+}
+
+.beyond-video-modal__player {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 84vh !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    background: #000 !important;
+}
+
+.beyond-video-modal__close {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 2147483647 !important;
+
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

@@ -1,0 +1,18 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+_template-backup/
+*.before-beyond-update
+*.before-seo
+*.before-local-video
+
+.netlify/
+.env
+.env.*
+
+# Local working and source material
+prompts/
+*.original.mp4
+*.optimized.mp4
