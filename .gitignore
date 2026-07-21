@@ -18,3 +18,5 @@ prompts/
 *.optimized.mp4
 *.before-netlify-form
 *.before-page-loader
+*.before-enquiry-email
+*.before-social-icons

@@ -2121,3 +2121,54 @@ html.beyond-page-loading .beyond-page-loader {
 }
 
 /* END BEYOND LEISURE MOBILE LAYOUT */
+
+/* BEGIN BEYOND LEISURE SOCIAL ICONS */
+
+.beyond-header-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beyond-header-social-icons a {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.beyond-header-social-icons a:hover {
+    color: #16000b;
+    border-color: #f4d20b;
+    background-color: #f4d20b;
+    transform: translateY(-2px);
+}
+
+.beyond-menu-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beyond-menu-social-icons li {
+    margin: 0 !important;
+}
+
+.beyond-menu-social-icons a:hover {
+    color: #f4d20b !important;
+}
+
+/* END BEYOND LEISURE SOCIAL ICONS */
